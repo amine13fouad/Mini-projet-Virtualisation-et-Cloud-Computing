@@ -1,0 +1,8 @@
+version: "3.8"
+
+services:
+  rasa:
+    build: .
+    container_name: chatbot_rasa_universitaire
+    ports:
+      - "5005:5005"
