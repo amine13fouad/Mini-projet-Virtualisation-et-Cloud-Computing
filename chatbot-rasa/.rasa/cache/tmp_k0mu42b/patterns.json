@@ -1,0 +1,42 @@
+[
+  {
+    "name": "groupe",
+    "pattern": "[A-D]"
+  },
+  {
+    "name": "groupe",
+    "pattern": "groupe [A-D]"
+  },
+  {
+    "name": "semestre",
+    "pattern": "S[1-6]"
+  },
+  {
+    "name": "semestre",
+    "pattern": "semestre [1-6]"
+  },
+  {
+    "name": "document_type",
+    "pattern": "(\\battestation\\ de\\ scolarité\\b|\\bcertificat\\ de\\ scolarité\\b|\\brelevé\\ de\\ notes\\b|\\battestation\\ de\\ réussite\\b|\\bcertificat\\ d'inscription\\b|\\bconvention\\ de\\ stage\\b|\\breçu\\ d'inscription\\b)"
+  },
+  {
+    "name": "semestre",
+    "pattern": "(\\bS1\\b|\\bS2\\b|\\bS3\\b|\\bS4\\b|\\bS5\\b|\\bS6\\b|\\bsemestre\\ 1\\b|\\bsemestre\\ 2\\b|\\bsemestre\\ 3\\b|\\bsemestre\\ 4\\b|\\bsemestre\\ 5\\b|\\bsemestre\\ 6\\b)"
+  },
+  {
+    "name": "filiere",
+    "pattern": "(\\béconomie\\b|\\bgestion\\b|\\bfinance\\b|\\bcomptabilité\\b|\\bmarketing\\b|\\bcommerce\\b|\\blogistique\\b|\\bmanagement\\b|\\bressources\\ humaines\\b|\\baudit\\b|\\bfiscalité\\b)"
+  },
+  {
+    "name": "module",
+    "pattern": "(\\bmicroéconomie\\b|\\bmacroéconomie\\b|\\bcomptabilité\\b|\\bstatistique\\b|\\bmathématiques\\b|\\bmanagement\\b|\\bmarketing\\b|\\bfinance\\b|\\bdroit\\ commercial\\b|\\béconomie\\ générale\\b|\\binformatique\\b|\\bfiscalité\\b|\\bgestion\\ des\\ ressources\\ humaines\\b|\\blogistique\\b|\\bcommerce\\ international\\b)"
+  },
+  {
+    "name": "cycle",
+    "pattern": "(\\blicence\\b|\\bmaster\\b|\\bdoctorat\\b|\\bcycle\\ licence\\b|\\bcycle\\ master\\b)"
+  },
+  {
+    "name": "groupe",
+    "pattern": "(\\bA\\b|\\bB\\b|\\bC\\b|\\bD\\b|\\bgroupe\\ A\\b|\\bgroupe\\ B\\b|\\bgroupe\\ C\\b|\\bgroupe\\ D\\b)"
+  }
+]

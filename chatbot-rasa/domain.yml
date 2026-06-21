@@ -1,0 +1,202 @@
+version: "3.1"
+
+# =========================
+# INTENTS
+# =========================
+intents:
+  - salutation
+  - aurevoir
+  - remerciement
+  - demande_aide
+  - inscription
+  - reinscription
+  - emploi_du_temps
+  - examens
+  - notes_resultats
+  - absence
+  - documents_administratifs
+  - contact_scolarite
+  - filieres_orientation
+  - reclamation
+  - plateforme_numerique
+  - stage
+  - bourse
+  - bibliotheque
+  - information_module
+  - incomprehension
+  - nlu_fallback
+
+# =========================
+# ENTITIES
+# =========================
+entities:
+  - document_type
+  - semestre
+  - filiere
+  - module
+  - cycle
+  - groupe
+
+# =========================
+# SLOTS
+# =========================
+slots:
+  document_type:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: document_type
+
+  semestre:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: semestre
+
+  filiere:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: filiere
+
+  module:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: module
+
+  cycle:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: cycle
+
+  groupe:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: groupe
+
+# =========================
+# RESPONSES
+# =========================
+responses:
+
+  utter_salutation:
+    - text: "Bonjour, je suis votre assistant universitaire intelligent. Je peux vous aider concernant l'inscription, les examens, les notes, les absences, les documents administratifs, les filières et plusieurs autres services universitaires."
+
+    - text: "Bonjour. Je suis là pour répondre à vos questions sur les services universitaires. Comment puis-je vous aider ?"
+
+  utter_aurevoir:
+    - text: "Au revoir. Bonne continuation dans vos études."
+
+    - text: "Merci pour votre visite. N'hésitez pas à revenir si vous avez une autre question."
+
+  utter_remerciement:
+    - text: "Avec plaisir. Je reste disponible si vous avez besoin d'une autre information."
+
+    - text: "Je vous en prie. N'hésitez pas à poser une autre question."
+
+  utter_demande_aide:
+    - text: "Je peux vous aider concernant l'inscription, la réinscription, l'emploi du temps, les examens, les notes, les absences, les documents administratifs, les filières, les stages, la bourse et la bibliothèque."
+
+    - text: "Bien sûr. Vous pouvez me poser une question sur les services universitaires, par exemple : inscription, examens, notes, documents ou contact de la scolarité."
+
+  utter_inscription:
+    - text: "Pour faire votre inscription universitaire, vous devez consulter la plateforme officielle de l'établissement, remplir les informations demandées et fournir les documents nécessaires comme la copie de la CIN, le baccalauréat, les photos et le reçu d'inscription si demandé."
+
+    - text: "L'inscription se fait généralement en ligne ou auprès du service de scolarité. Il faut respecter les délais annoncés par l'administration et préparer les documents demandés."
+
+  utter_reinscription:
+    - text: "La réinscription concerne les étudiants déjà inscrits. Elle se fait généralement via la plateforme officielle de l'université ou directement auprès du service de scolarité selon la procédure annoncée."
+
+    - text: "Pour renouveler votre inscription, consultez les annonces officielles de la faculté, connectez-vous à votre espace étudiant et suivez les étapes de réinscription."
+
+  utter_emploi_du_temps:
+    - text: "L'emploi du temps est généralement publié sur le site officiel de la faculté, sur les panneaux d'affichage ou communiqué par le service pédagogique."
+
+    - text: "Pour consulter votre emploi du temps, vérifiez le site de la faculté, votre espace étudiant ou les annonces du département correspondant à votre filière et votre semestre."
+
+  utter_examens:
+    - text: "Le calendrier des examens est publié par l'administration avant la période des examens. Il contient généralement les dates, les horaires, les modules et parfois les salles."
+
+    - text: "Pour connaître les dates des examens, consultez le planning officiel publié par la faculté. Il faut toujours vérifier la dernière version car des modifications peuvent être annoncées."
+
+  utter_notes_resultats:
+    - text: "Les notes et résultats sont généralement consultables sur la plateforme officielle de l'établissement ou affichés par l'administration après validation."
+
+    - text: "Pour consulter vos résultats, connectez-vous à votre espace étudiant ou vérifiez les annonces officielles de la faculté. Si une note manque, vous pouvez contacter la scolarité ou le département concerné."
+
+  utter_absence:
+    - text: "Pour justifier une absence, vous devez déposer un justificatif valide, comme un certificat médical, auprès de l'administration ou l'envoyer au professeur concerné selon la procédure de l'établissement."
+
+    - text: "En cas d'absence, il est conseillé de préparer un justificatif et de le transmettre rapidement au service concerné afin d'éviter tout problème administratif ou pédagogique."
+
+  utter_documents_administratifs:
+    - text: "Les documents administratifs comme l'attestation de scolarité, le relevé de notes, l'attestation de réussite ou la convention de stage peuvent être demandés auprès du service de scolarité."
+
+    - text: "Pour obtenir un document administratif, vous devez généralement déposer une demande auprès de la scolarité ou utiliser la plateforme numérique de l'établissement si ce service est disponible."
+
+  utter_contact_scolarite:
+    - text: "Le service de scolarité peut être contacté directement au sein de la faculté pendant les horaires d'ouverture. L'adresse email et le numéro de téléphone sont généralement disponibles sur le site officiel de l'établissement."
+
+    - text: "Pour contacter la scolarité, consultez le site officiel de la faculté ou rendez-vous directement au bureau de scolarité pendant les heures de réception."
+
+  utter_filieres_orientation:
+    - text: "Les filières disponibles dépendent de l'établissement. Dans une faculté d'économie et de gestion, on trouve souvent des filières comme économie, gestion, finance, comptabilité, marketing, commerce, logistique ou management."
+
+    - text: "Le choix d'une filière se fait généralement après le tronc commun, selon les conditions pédagogiques, les résultats obtenus et les places disponibles dans chaque spécialité."
+
+  utter_reclamation:
+    - text: "Pour déposer une réclamation, vous devez généralement remplir une demande ou contacter le service concerné. La réclamation peut concerner une note, une absence, une erreur administrative ou un problème d'inscription."
+
+    - text: "Si vous constatez une erreur dans vos notes, votre inscription ou vos informations personnelles, il faut contacter rapidement la scolarité ou le département concerné avec les justificatifs nécessaires."
+
+  utter_plateforme_numerique:
+    - text: "Si vous avez un problème avec la plateforme numérique, vérifiez d'abord votre identifiant et votre mot de passe. Si le problème continue, contactez le service informatique ou la scolarité."
+
+    - text: "En cas de problème de connexion à la plateforme, essayez de réinitialiser votre mot de passe ou contactez l'administration pour récupérer votre accès."
+
+  utter_stage:
+    - text: "Pour faire un stage, vous devez généralement demander une convention de stage auprès de la scolarité ou du service chargé des stages. Cette convention doit être signée par l'établissement, l'entreprise et l'étudiant."
+
+    - text: "La convention de stage est un document important qui encadre votre stage. Vous devez la demander avant de commencer le stage et respecter la procédure de validation."
+
+  utter_bourse:
+    - text: "Les informations concernant la bourse sont généralement disponibles sur les plateformes officielles du ministère ou de l'université. Pour un problème de versement, il faut contacter le service concerné."
+
+    - text: "Pour vérifier votre bourse, consultez la plateforme officielle dédiée aux bourses ou contactez l'administration compétente avec votre numéro d'étudiant."
+
+  utter_bibliotheque:
+    - text: "La bibliothèque universitaire permet généralement aux étudiants de consulter ou emprunter des livres, mémoires, revues et ressources numériques selon le règlement interne."
+
+    - text: "Pour utiliser la bibliothèque, vous devez souvent présenter votre carte d'étudiant. Les horaires d'ouverture sont généralement affichés à l'entrée de la bibliothèque ou sur le site de la faculté."
+
+  utter_information_module:
+    - text: "Les informations sur les modules, comme le programme, le coefficient, l'enseignant ou les modalités d'évaluation, sont généralement communiquées par le département ou les professeurs responsables."
+
+    - text: "Pour connaître les détails d'un module, consultez le descriptif pédagogique de la filière ou contactez le professeur responsable du module."
+
+  utter_incomprehension:
+    - text: "Je n'ai pas bien compris votre demande. Pouvez-vous reformuler votre question d'une manière plus claire ?"
+
+    - text: "Désolé, je ne suis pas sûr d'avoir compris. Vous pouvez poser une question sur l'inscription, les examens, les notes, les absences ou les documents administratifs."
+
+  utter_default:
+    - text: "Je n'ai pas compris votre message. Veuillez reformuler votre question."
+
+  utter_please_rephrase:
+    - text: "Je n'ai pas bien compris. Pouvez-vous reformuler votre demande ?"
+
+# =========================
+# SESSION CONFIG
+# =========================
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

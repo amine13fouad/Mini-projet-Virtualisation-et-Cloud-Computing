@@ -1,0 +1,367 @@
+version: "3.1"
+
+stories:
+
+# =========================
+# 1. SALUTATION SIMPLE
+# =========================
+- story: salutation simple
+  steps:
+    - intent: salutation
+    - action: utter_salutation
+
+# =========================
+# 2. AU REVOIR SIMPLE
+# =========================
+- story: aurevoir simple
+  steps:
+    - intent: aurevoir
+    - action: utter_aurevoir
+
+# =========================
+# 3. REMERCIEMENT SIMPLE
+# =========================
+- story: remerciement simple
+  steps:
+    - intent: remerciement
+    - action: utter_remerciement
+
+# =========================
+# 4. DEMANDE D'AIDE GÉNÉRALE
+# =========================
+- story: demande aide generale
+  steps:
+    - intent: demande_aide
+    - action: utter_demande_aide
+
+# =========================
+# 5. INSCRIPTION UNIVERSITAIRE
+# =========================
+- story: demande inscription universitaire
+  steps:
+    - intent: inscription
+    - action: utter_inscription
+
+# =========================
+# 6. RÉINSCRIPTION
+# =========================
+- story: demande reinscription
+  steps:
+    - intent: reinscription
+    - action: utter_reinscription
+
+# =========================
+# 7. EMPLOI DU TEMPS
+# =========================
+- story: demande emploi du temps
+  steps:
+    - intent: emploi_du_temps
+    - action: utter_emploi_du_temps
+
+# =========================
+# 8. EXAMENS
+# =========================
+- story: demande examens
+  steps:
+    - intent: examens
+    - action: utter_examens
+
+# =========================
+# 9. NOTES ET RÉSULTATS
+# =========================
+- story: demande notes resultats
+  steps:
+    - intent: notes_resultats
+    - action: utter_notes_resultats
+
+# =========================
+# 10. ABSENCE
+# =========================
+- story: demande absence
+  steps:
+    - intent: absence
+    - action: utter_absence
+
+# =========================
+# 11. DOCUMENTS ADMINISTRATIFS
+# =========================
+- story: demande documents administratifs
+  steps:
+    - intent: documents_administratifs
+    - action: utter_documents_administratifs
+
+# =========================
+# 12. CONTACT SCOLARITÉ
+# =========================
+- story: demande contact scolarite
+  steps:
+    - intent: contact_scolarite
+    - action: utter_contact_scolarite
+
+# =========================
+# 13. FILIÈRES ET ORIENTATION
+# =========================
+- story: demande filieres orientation
+  steps:
+    - intent: filieres_orientation
+    - action: utter_filieres_orientation
+
+# =========================
+# 14. RÉCLAMATION
+# =========================
+- story: demande reclamation
+  steps:
+    - intent: reclamation
+    - action: utter_reclamation
+
+# =========================
+# 15. PLATEFORME NUMÉRIQUE
+# =========================
+- story: demande plateforme numerique
+  steps:
+    - intent: plateforme_numerique
+    - action: utter_plateforme_numerique
+
+# =========================
+# 16. STAGE
+# =========================
+- story: demande stage
+  steps:
+    - intent: stage
+    - action: utter_stage
+
+# =========================
+# 17. BOURSE
+# =========================
+- story: demande bourse
+  steps:
+    - intent: bourse
+    - action: utter_bourse
+
+# =========================
+# 18. BIBLIOTHÈQUE
+# =========================
+- story: demande bibliotheque
+  steps:
+    - intent: bibliotheque
+    - action: utter_bibliotheque
+
+# =========================
+# 19. INFORMATION MODULE
+# =========================
+- story: demande information module
+  steps:
+    - intent: information_module
+    - action: utter_information_module
+
+# =========================
+# 20. INCOMPRÉHENSION
+# =========================
+- story: incomprehension utilisateur
+  steps:
+    - intent: incomprehension
+    - action: utter_incomprehension
+
+# =========================
+# 21. CONVERSATION COMPLÈTE : SALUTATION + AIDE + INSCRIPTION
+# =========================
+- story: conversation inscription apres salutation
+  steps:
+    - intent: salutation
+    - action: utter_salutation
+    - intent: inscription
+    - action: utter_inscription
+    - intent: remerciement
+    - action: utter_remerciement
+    - intent: aurevoir
+    - action: utter_aurevoir
+
+# =========================
+# 22. CONVERSATION COMPLÈTE : EMPLOI DU TEMPS
+# =========================
+- story: conversation emploi du temps
+  steps:
+    - intent: salutation
+    - action: utter_salutation
+    - intent: emploi_du_temps
+    - action: utter_emploi_du_temps
+    - intent: remerciement
+    - action: utter_remerciement
+
+# =========================
+# 23. CONVERSATION COMPLÈTE : EXAMENS ET NOTES
+# =========================
+- story: conversation examens et notes
+  steps:
+    - intent: salutation
+    - action: utter_salutation
+    - intent: examens
+    - action: utter_examens
+    - intent: notes_resultats
+    - action: utter_notes_resultats
+    - intent: remerciement
+    - action: utter_remerciement
+
+# =========================
+# 24. CONVERSATION COMPLÈTE : ABSENCE
+# =========================
+- story: conversation absence
+  steps:
+    - intent: salutation
+    - action: utter_salutation
+    - intent: absence
+    - action: utter_absence
+    - intent: contact_scolarite
+    - action: utter_contact_scolarite
+    - intent: aurevoir
+    - action: utter_aurevoir
+
+# =========================
+# 25. CONVERSATION COMPLÈTE : DOCUMENTS ADMINISTRATIFS
+# =========================
+- story: conversation documents administratifs
+  steps:
+    - intent: salutation
+    - action: utter_salutation
+    - intent: documents_administratifs
+    - action: utter_documents_administratifs
+    - intent: contact_scolarite
+    - action: utter_contact_scolarite
+    - intent: remerciement
+    - action: utter_remerciement
+
+# =========================
+# 26. CONVERSATION COMPLÈTE : FILIÈRES ET ORIENTATION
+# =========================
+- story: conversation filieres orientation
+  steps:
+    - intent: salutation
+    - action: utter_salutation
+    - intent: filieres_orientation
+    - action: utter_filieres_orientation
+    - intent: information_module
+    - action: utter_information_module
+    - intent: remerciement
+    - action: utter_remerciement
+
+# =========================
+# 27. CONVERSATION COMPLÈTE : RÉCLAMATION NOTE
+# =========================
+- story: conversation reclamation note
+  steps:
+    - intent: salutation
+    - action: utter_salutation
+    - intent: notes_resultats
+    - action: utter_notes_resultats
+    - intent: reclamation
+    - action: utter_reclamation
+    - intent: contact_scolarite
+    - action: utter_contact_scolarite
+
+# =========================
+# 28. CONVERSATION COMPLÈTE : PROBLÈME PLATEFORME
+# =========================
+- story: conversation probleme plateforme
+  steps:
+    - intent: salutation
+    - action: utter_salutation
+    - intent: plateforme_numerique
+    - action: utter_plateforme_numerique
+    - intent: contact_scolarite
+    - action: utter_contact_scolarite
+    - intent: remerciement
+    - action: utter_remerciement
+
+# =========================
+# 29. CONVERSATION COMPLÈTE : STAGE
+# =========================
+- story: conversation stage
+  steps:
+    - intent: salutation
+    - action: utter_salutation
+    - intent: stage
+    - action: utter_stage
+    - intent: documents_administratifs
+    - action: utter_documents_administratifs
+    - intent: remerciement
+    - action: utter_remerciement
+
+# =========================
+# 30. CONVERSATION COMPLÈTE : BOURSE
+# =========================
+- story: conversation bourse
+  steps:
+    - intent: salutation
+    - action: utter_salutation
+    - intent: bourse
+    - action: utter_bourse
+    - intent: contact_scolarite
+    - action: utter_contact_scolarite
+    - intent: aurevoir
+    - action: utter_aurevoir
+
+# =========================
+# 31. CONVERSATION COMPLÈTE : BIBLIOTHÈQUE
+# =========================
+- story: conversation bibliotheque
+  steps:
+    - intent: salutation
+    - action: utter_salutation
+    - intent: bibliotheque
+    - action: utter_bibliotheque
+    - intent: remerciement
+    - action: utter_remerciement
+    - intent: aurevoir
+    - action: utter_aurevoir
+
+# =========================
+# 32. CONVERSATION COMPLÈTE : AIDE GÉNÉRALE PUIS CHOIX SERVICE
+# =========================
+- story: conversation aide generale puis examens
+  steps:
+    - intent: salutation
+    - action: utter_salutation
+    - intent: demande_aide
+    - action: utter_demande_aide
+    - intent: examens
+    - action: utter_examens
+    - intent: remerciement
+    - action: utter_remerciement
+
+# =========================
+# 33. CONVERSATION COMPLÈTE : AIDE GÉNÉRALE PUIS DOCUMENTS
+# =========================
+- story: conversation aide generale puis documents
+  steps:
+    - intent: demande_aide
+    - action: utter_demande_aide
+    - intent: documents_administratifs
+    - action: utter_documents_administratifs
+    - intent: contact_scolarite
+    - action: utter_contact_scolarite
+
+# =========================
+# 34. CONVERSATION AVEC INCOMPRÉHENSION
+# =========================
+- story: conversation avec incomprehension
+  steps:
+    - intent: salutation
+    - action: utter_salutation
+    - intent: incomprehension
+    - action: utter_incomprehension
+    - intent: demande_aide
+    - action: utter_demande_aide
+
+# =========================
+# 35. CONVERSATION FIN NORMALE
+# =========================
+- story: conversation fin normale
+  steps:
+    - intent: salutation
+    - action: utter_salutation
+    - intent: demande_aide
+    - action: utter_demande_aide
+    - intent: remerciement
+    - action: utter_remerciement
+    - intent: aurevoir
+    - action: utter_aurevoir

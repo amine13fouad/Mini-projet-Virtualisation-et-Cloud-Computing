@@ -1,0 +1,533 @@
+version: "3.1"
+
+nlu:
+
+# =========================
+# 1. SALUTATION
+# =========================
+- intent: salutation
+  examples: |
+    - bonjour
+    - salut
+    - bonsoir
+    - hello
+    - salam
+    - coucou
+    - salut bot
+    - bonjour assistant
+    - bonjour, j'ai besoin d'aide
+    - salut, peux-tu m'aider ?
+    - bonsoir, j'ai une question
+    - salam, je veux poser une question
+
+# =========================
+# 2. AU REVOIR
+# =========================
+- intent: aurevoir
+  examples: |
+    - au revoir
+    - à bientôt
+    - bonne journée
+    - bonne soirée
+    - merci, au revoir
+    - c'est tout, merci
+    - je n'ai plus de questions
+    - à la prochaine
+    - bye
+    - merci pour l'aide
+    - d'accord, au revoir
+    - merci, bonne continuation
+
+# =========================
+# 3. REMERCIEMENT
+# =========================
+- intent: remerciement
+  examples: |
+    - merci
+    - merci beaucoup
+    - je te remercie
+    - merci pour votre aide
+    - c'est gentil
+    - parfait merci
+    - merci assistant
+    - merci pour l'information
+    - très bien merci
+    - d'accord merci
+    - super merci
+    - merci pour la réponse
+
+# =========================
+# 4. DEMANDE D'AIDE GÉNÉRALE
+# =========================
+- intent: demande_aide
+  examples: |
+    - j'ai besoin d'aide
+    - peux-tu m'aider ?
+    - je veux poser une question
+    - je suis étudiant et j'ai besoin d'informations
+    - je cherche une information universitaire
+    - je ne sais pas quoi faire
+    - pouvez-vous m'aider ?
+    - j'ai une question concernant la faculté
+    - je veux des informations sur les services universitaires
+    - aide-moi s'il te plaît
+    - je suis perdu
+    - je veux contacter quelqu'un pour m'aider
+
+# =========================
+# 5. INSCRIPTION UNIVERSITAIRE
+# =========================
+- intent: inscription
+  examples: |
+    - comment faire mon inscription ?
+    - je veux m'inscrire à la faculté
+    - quelles sont les étapes d'inscription ?
+    - comment s'inscrire à l'université ?
+    - je veux connaître la procédure d'inscription
+    - où faire l'inscription ?
+    - quels documents sont nécessaires pour l'inscription ?
+    - est-ce que l'inscription est ouverte ?
+    - quelle est la date limite d'inscription ?
+    - je veux finaliser mon inscription
+    - comment renouveler mon inscription ?
+    - je suis nouveau, comment faire l'inscription ?
+    - je veux m'inscrire en [licence](cycle)
+    - je veux m'inscrire en [master](cycle)
+    - comment faire l'inscription en [S1](semestre) ?
+    - quelles sont les conditions d'inscription en [master](cycle) ?
+
+# =========================
+# 6. RÉINSCRIPTION
+# =========================
+- intent: reinscription
+  examples: |
+    - comment faire la réinscription ?
+    - je veux me réinscrire
+    - quelles sont les étapes de réinscription ?
+    - où faire ma réinscription ?
+    - est-ce que la réinscription est obligatoire ?
+    - je suis déjà étudiant, comment renouveler mon inscription ?
+    - je veux renouveler mon année universitaire
+    - comment faire la réinscription en ligne ?
+    - la plateforme de réinscription ne marche pas
+    - quels documents faut-il pour la réinscription ?
+    - je veux faire ma réinscription pour [S3](semestre)
+    - comment me réinscrire en [S5](semestre) ?
+
+# =========================
+# 7. EMPLOI DU TEMPS
+# =========================
+- intent: emploi_du_temps
+  examples: |
+    - où trouver l'emploi du temps ?
+    - je veux consulter mon emploi du temps
+    - comment voir mon planning ?
+    - où est affiché l'emploi du temps ?
+    - je veux connaître les horaires des cours
+    - est-ce que l'emploi du temps est disponible ?
+    - quand sera publié l'emploi du temps ?
+    - où trouver le planning de [S1](semestre) ?
+    - je cherche l'emploi du temps de [S3](semestre)
+    - je veux l'emploi du temps de la filière [économie](filiere)
+    - quel est l'horaire des cours aujourd'hui ?
+    - où puis-je consulter le planning des séances ?
+    - je veux voir l'emploi du temps du groupe [A](groupe)
+    - l'emploi du temps a-t-il changé ?
+    - est-ce qu'il y a cours demain ?
+
+# =========================
+# 8. EXAMENS
+# =========================
+- intent: examens
+  examples: |
+    - quand commencent les examens ?
+    - je veux connaître les dates des examens
+    - où trouver le calendrier des examens ?
+    - est-ce que le planning des examens est disponible ?
+    - quand aura lieu l'examen ?
+    - je cherche le calendrier des examens de [S2](semestre)
+    - je veux le planning des examens de [S4](semestre)
+    - où est affiché le calendrier des contrôles ?
+    - quand passent les examens de rattrapage ?
+    - je veux connaître les dates de rattrapage
+    - est-ce que les examens sont cette semaine ?
+    - où consulter les salles d'examen ?
+    - je veux savoir ma salle d'examen
+    - quand commence la session normale ?
+    - quand commence la session de rattrapage ?
+    - je cherche l'examen du module [microéconomie](module)
+    - je veux la date de l'examen de [statistique](module)
+
+# =========================
+# 9. NOTES ET RÉSULTATS
+# =========================
+- intent: notes_resultats
+  examples: |
+    - où consulter mes notes ?
+    - comment voir mes résultats ?
+    - mes notes sont-elles disponibles ?
+    - quand seront publiées les notes ?
+    - je veux consulter mes résultats
+    - où trouver les résultats des examens ?
+    - les notes sont affichées où ?
+    - je veux voir ma note de [comptabilité](module)
+    - où puis-je consulter mes notes de [S1](semestre) ?
+    - les résultats de [S3](semestre) sont-ils disponibles ?
+    - je n'arrive pas à voir mes notes
+    - mes résultats ne s'affichent pas
+    - quand les résultats seront-ils publiés ?
+    - comment savoir si j'ai validé le module ?
+    - je veux savoir si j'ai réussi
+    - où consulter la moyenne générale ?
+
+# =========================
+# 10. ABSENCE
+# =========================
+- intent: absence
+  examples: |
+    - comment justifier une absence ?
+    - j'ai été absent
+    - où déposer un justificatif d'absence ?
+    - je veux justifier mon absence
+    - que faire en cas d'absence ?
+    - je n'ai pas assisté au cours
+    - j'étais absent pendant l'examen
+    - comment envoyer un certificat médical ?
+    - où déposer le certificat médical ?
+    - j'ai raté une séance
+    - j'ai raté un examen
+    - est-ce que je peux justifier mon absence ?
+    - quel est le délai pour justifier une absence ?
+    - j'étais malade, que dois-je faire ?
+    - je veux envoyer une justification au professeur
+    - comment contacter l'administration pour une absence ?
+
+# =========================
+# 11. DOCUMENTS ADMINISTRATIFS
+# =========================
+- intent: documents_administratifs
+  examples: |
+    - comment obtenir une [attestation de scolarité](document_type) ?
+    - je veux une [attestation de scolarité](document_type)
+    - où demander un [relevé de notes](document_type) ?
+    - comment avoir mon [relevé de notes](document_type) ?
+    - je veux demander un document administratif
+    - quels documents peut-on demander à la scolarité ?
+    - comment récupérer mon [certificat d'inscription](document_type) ?
+    - j'ai besoin d'une [attestation de réussite](document_type)
+    - où déposer une demande de document ?
+    - combien de temps faut-il pour obtenir une attestation ?
+    - je veux un [certificat de scolarité](document_type)
+    - comment demander une [convention de stage](document_type) ?
+    - où récupérer mon document administratif ?
+    - est-ce que les documents sont disponibles en ligne ?
+    - je veux une copie de mon [relevé de notes](document_type)
+    - je cherche une [attestation de réussite](document_type)
+
+# =========================
+# 12. CONTACT SCOLARITÉ
+# =========================
+- intent: contact_scolarite
+  examples: |
+    - comment contacter la scolarité ?
+    - quel est l'email de la scolarité ?
+    - où se trouve le service de scolarité ?
+    - je veux contacter l'administration
+    - comment appeler le service de scolarité ?
+    - quels sont les horaires de la scolarité ?
+    - est-ce que la scolarité est ouverte aujourd'hui ?
+    - je veux parler avec un responsable
+    - où trouver le bureau de scolarité ?
+    - quel est le numéro de téléphone de l'administration ?
+    - comment envoyer un email à la faculté ?
+    - je veux contacter le service pédagogique
+    - où déposer une réclamation ?
+    - je veux contacter le département
+    - comment joindre l'administration universitaire ?
+
+# =========================
+# 13. FILIÈRES ET ORIENTATION
+# =========================
+- intent: filieres_orientation
+  examples: |
+    - quelles sont les filières disponibles ?
+    - je veux connaître les filières de la troisième année
+    - quelles filières existent à la faculté ?
+    - comment choisir une filière ?
+    - je veux m'orienter vers une filière
+    - quelles sont les conditions pour choisir une filière ?
+    - je veux des informations sur la filière [économie](filiere)
+    - je veux des informations sur la filière [gestion](filiere)
+    - comment choisir entre [finance](filiere) et [marketing](filiere) ?
+    - quelles sont les filières après le tronc commun ?
+    - je suis en [S4](semestre), quelle filière choisir ?
+    - quelles sont les spécialités disponibles ?
+    - est-ce qu'il y a une filière [logistique](filiere) ?
+    - je veux choisir [comptabilité](filiere)
+    - quelles sont les conditions d'accès à la filière [commerce](filiere) ?
+    - comment fonctionne l'orientation en troisième année ?
+
+# =========================
+# 14. RÉCLAMATION
+# =========================
+- intent: reclamation
+  examples: |
+    - je veux faire une réclamation
+    - comment déposer une réclamation ?
+    - où envoyer une réclamation ?
+    - j'ai un problème avec ma note
+    - ma note est incorrecte
+    - je veux contester une note
+    - j'ai un problème administratif
+    - mon nom n'apparaît pas dans la liste
+    - je ne trouve pas mon résultat
+    - j'ai un problème avec l'inscription
+    - je veux signaler une erreur
+    - comment corriger une erreur dans mes informations ?
+    - j'ai une erreur dans mon relevé de notes
+    - je veux déposer une réclamation concernant [microéconomie](module)
+    - mon absence a été comptée par erreur
+    - je veux faire une demande de correction
+
+# =========================
+# 15. PLATEFORME NUMÉRIQUE
+# =========================
+- intent: plateforme_numerique
+  examples: |
+    - je n'arrive pas à accéder à la plateforme
+    - la plateforme ne fonctionne pas
+    - j'ai oublié mon mot de passe
+    - comment récupérer mon compte ?
+    - je ne peux pas me connecter
+    - mon identifiant ne marche pas
+    - comment accéder à la plateforme universitaire ?
+    - où trouver mon compte étudiant ?
+    - j'ai un problème de connexion
+    - le site de la faculté ne s'ouvre pas
+    - je veux changer mon mot de passe
+    - je n'arrive pas à consulter mes notes en ligne
+    - la plateforme affiche une erreur
+    - comment créer mon compte étudiant ?
+    - je veux accéder à mon espace étudiant
+
+# =========================
+# 16. STAGE
+# =========================
+- intent: stage
+  examples: |
+    - comment obtenir une convention de stage ?
+    - je veux faire un stage
+    - où demander une convention de stage ?
+    - quels documents faut-il pour un stage ?
+    - la faculté donne-t-elle une convention de stage ?
+    - comment faire signer ma convention de stage ?
+    - je cherche des informations sur le stage
+    - est-ce que le stage est obligatoire ?
+    - je veux déposer ma convention de stage
+    - où récupérer la convention de stage ?
+    - combien de temps prend la signature d'une convention ?
+    - je veux faire un stage en entreprise
+    - comment valider mon stage ?
+    - est-ce que je dois déposer un rapport de stage ?
+
+# =========================
+# 17. BOURSE
+# =========================
+- intent: bourse
+  examples: |
+    - comment demander la bourse ?
+    - je veux des informations sur la bourse
+    - quand sera versée la bourse ?
+    - où consulter ma bourse ?
+    - comment savoir si je suis boursier ?
+    - je n'ai pas reçu ma bourse
+    - quelles sont les conditions pour obtenir la bourse ?
+    - comment déposer une demande de bourse ?
+    - je veux vérifier l'état de ma bourse
+    - qui contacter pour un problème de bourse ?
+    - est-ce que les étudiants de master ont droit à la bourse ?
+    - je veux savoir la date de paiement de la bourse
+
+# =========================
+# 18. BIBLIOTHÈQUE
+# =========================
+- intent: bibliotheque
+  examples: |
+    - où se trouve la bibliothèque ?
+    - quels sont les horaires de la bibliothèque ?
+    - comment emprunter un livre ?
+    - je veux chercher un livre
+    - est-ce que la bibliothèque est ouverte ?
+    - comment accéder à la bibliothèque ?
+    - quels documents faut-il pour s'inscrire à la bibliothèque ?
+    - combien de livres peut-on emprunter ?
+    - je veux rendre un livre
+    - est-ce qu'il y a une bibliothèque numérique ?
+    - comment consulter les ressources en ligne ?
+    - la bibliothèque est-elle ouverte le samedi ?
+
+# =========================
+# 19. INFORMATIONS SUR LES MODULES
+# =========================
+- intent: information_module
+  examples: |
+    - je veux des informations sur le module [microéconomie](module)
+    - qui enseigne le module [statistique](module) ?
+    - quel est le coefficient du module [comptabilité](module) ?
+    - comment valider le module [marketing](module) ?
+    - je cherche les informations du module [management](module)
+    - est-ce que le module [finance](module) est difficile ?
+    - quel est le programme du module [économie générale](module) ?
+    - combien de séances pour le module [droit commercial](module) ?
+    - je veux connaître le professeur du module [mathématiques](module)
+    - quelles sont les matières de [S2](semestre) ?
+    - quels modules sont enseignés en [S1](semestre) ?
+    - je veux la liste des modules de [S4](semestre)
+
+# =========================
+# 20. FALLBACK / INCOMPRÉHENSION
+# =========================
+- intent: incomprehension
+  examples: |
+    - blabla
+    - je ne sais pas
+    - azerty
+    - qsdfgh
+    - n'importe quoi
+    - test test
+    - phrase incompréhensible
+    - je veux quelque chose
+    - information bizarre
+    - aide random
+    - xxxxx
+    - rien
+
+# =========================
+# SYNONYMES
+# =========================
+- synonym: attestation de scolarité
+  examples: |
+    - certificat de scolarité
+    - attestation scolaire
+    - certificat d'inscription
+
+- synonym: relevé de notes
+  examples: |
+    - relevé
+    - bulletin
+    - bulletin de notes
+    - notes imprimées
+
+- synonym: scolarité
+  examples: |
+    - administration
+    - service administratif
+    - service étudiant
+    - service pédagogique
+
+- synonym: emploi du temps
+  examples: |
+    - planning
+    - horaire
+    - calendrier des cours
+    - programme des cours
+
+- synonym: examens
+  examples: |
+    - contrôles
+    - épreuves
+    - partiels
+    - session normale
+    - session de rattrapage
+
+# =========================
+# LOOKUP TABLES
+# =========================
+- lookup: document_type
+  examples: |
+    - attestation de scolarité
+    - certificat de scolarité
+    - relevé de notes
+    - attestation de réussite
+    - certificat d'inscription
+    - convention de stage
+    - reçu d'inscription
+
+- lookup: semestre
+  examples: |
+    - S1
+    - S2
+    - S3
+    - S4
+    - S5
+    - S6
+    - semestre 1
+    - semestre 2
+    - semestre 3
+    - semestre 4
+    - semestre 5
+    - semestre 6
+
+- lookup: filiere
+  examples: |
+    - économie
+    - gestion
+    - finance
+    - comptabilité
+    - marketing
+    - commerce
+    - logistique
+    - management
+    - ressources humaines
+    - audit
+    - fiscalité
+
+- lookup: module
+  examples: |
+    - microéconomie
+    - macroéconomie
+    - comptabilité
+    - statistique
+    - mathématiques
+    - management
+    - marketing
+    - finance
+    - droit commercial
+    - économie générale
+    - informatique
+    - fiscalité
+    - gestion des ressources humaines
+    - logistique
+    - commerce international
+
+- lookup: cycle
+  examples: |
+    - licence
+    - master
+    - doctorat
+    - cycle licence
+    - cycle master
+
+- lookup: groupe
+  examples: |
+    - A
+    - B
+    - C
+    - D
+    - groupe A
+    - groupe B
+    - groupe C
+    - groupe D
+
+# =========================
+# REGEX
+# =========================
+- regex: semestre
+  examples: |
+    - S[1-6]
+    - semestre [1-6]
+
+- regex: groupe
+  examples: |
+    - groupe [A-D]
+    - [A-D]

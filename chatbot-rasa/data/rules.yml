@@ -1,0 +1,171 @@
+version: "3.1"
+
+rules:
+
+# =========================
+# 1. RÈGLE : SALUTATION
+# =========================
+- rule: répondre à une salutation
+  steps:
+    - intent: salutation
+    - action: utter_salutation
+
+# =========================
+# 2. RÈGLE : AU REVOIR
+# =========================
+- rule: répondre à un au revoir
+  steps:
+    - intent: aurevoir
+    - action: utter_aurevoir
+
+# =========================
+# 3. RÈGLE : REMERCIEMENT
+# =========================
+- rule: répondre à un remerciement
+  steps:
+    - intent: remerciement
+    - action: utter_remerciement
+
+# =========================
+# 4. RÈGLE : DEMANDE D'AIDE
+# =========================
+- rule: répondre à une demande d'aide générale
+  steps:
+    - intent: demande_aide
+    - action: utter_demande_aide
+
+# =========================
+# 5. RÈGLE : INSCRIPTION
+# =========================
+- rule: répondre à une demande d'inscription
+  steps:
+    - intent: inscription
+    - action: utter_inscription
+
+# =========================
+# 6. RÈGLE : RÉINSCRIPTION
+# =========================
+- rule: répondre à une demande de réinscription
+  steps:
+    - intent: reinscription
+    - action: utter_reinscription
+
+# =========================
+# 7. RÈGLE : EMPLOI DU TEMPS
+# =========================
+- rule: répondre à une demande d'emploi du temps
+  steps:
+    - intent: emploi_du_temps
+    - action: utter_emploi_du_temps
+
+# =========================
+# 8. RÈGLE : EXAMENS
+# =========================
+- rule: répondre à une demande concernant les examens
+  steps:
+    - intent: examens
+    - action: utter_examens
+
+# =========================
+# 9. RÈGLE : NOTES ET RÉSULTATS
+# =========================
+- rule: répondre à une demande concernant les notes et résultats
+  steps:
+    - intent: notes_resultats
+    - action: utter_notes_resultats
+
+# =========================
+# 10. RÈGLE : ABSENCE
+# =========================
+- rule: répondre à une demande concernant une absence
+  steps:
+    - intent: absence
+    - action: utter_absence
+
+# =========================
+# 11. RÈGLE : DOCUMENTS ADMINISTRATIFS
+# =========================
+- rule: répondre à une demande de documents administratifs
+  steps:
+    - intent: documents_administratifs
+    - action: utter_documents_administratifs
+
+# =========================
+# 12. RÈGLE : CONTACT SCOLARITÉ
+# =========================
+- rule: répondre à une demande de contact scolarité
+  steps:
+    - intent: contact_scolarite
+    - action: utter_contact_scolarite
+
+# =========================
+# 13. RÈGLE : FILIÈRES ET ORIENTATION
+# =========================
+- rule: répondre à une demande sur les filières et l'orientation
+  steps:
+    - intent: filieres_orientation
+    - action: utter_filieres_orientation
+
+# =========================
+# 14. RÈGLE : RÉCLAMATION
+# =========================
+- rule: répondre à une réclamation
+  steps:
+    - intent: reclamation
+    - action: utter_reclamation
+
+# =========================
+# 15. RÈGLE : PLATEFORME NUMÉRIQUE
+# =========================
+- rule: répondre à un problème de plateforme numérique
+  steps:
+    - intent: plateforme_numerique
+    - action: utter_plateforme_numerique
+
+# =========================
+# 16. RÈGLE : STAGE
+# =========================
+- rule: répondre à une demande concernant le stage
+  steps:
+    - intent: stage
+    - action: utter_stage
+
+# =========================
+# 17. RÈGLE : BOURSE
+# =========================
+- rule: répondre à une demande concernant la bourse
+  steps:
+    - intent: bourse
+    - action: utter_bourse
+
+# =========================
+# 18. RÈGLE : BIBLIOTHÈQUE
+# =========================
+- rule: répondre à une demande concernant la bibliothèque
+  steps:
+    - intent: bibliotheque
+    - action: utter_bibliotheque
+
+# =========================
+# 19. RÈGLE : INFORMATION MODULE
+# =========================
+- rule: répondre à une demande d'information sur un module
+  steps:
+    - intent: information_module
+    - action: utter_information_module
+
+# =========================
+# 20. RÈGLE : INCOMPRÉHENSION
+# =========================
+- rule: répondre à une phrase incompréhensible
+  steps:
+    - intent: incomprehension
+    - action: utter_incomprehension
+
+# =========================
+# 21. RÈGLE : FALLBACK RASA
+# =========================
+- rule: fallback si le chatbot ne comprend pas
+  steps:
+    - intent: nlu_fallback
+    - action: utter_please_rephrase
