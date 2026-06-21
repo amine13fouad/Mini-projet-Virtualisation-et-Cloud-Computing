@@ -6,3 +6,9 @@ services:
     container_name: chatbot_rasa_universitaire
     ports:
       - "5005:5005"
+    command:
+      - run
+      - --enable-api
+      - --cors
+      - "*"
+      - --debug
